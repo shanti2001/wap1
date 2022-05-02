@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US">
+        <meta chrset="UTF-8">
+        <title>
+            ONLINE OFLINE
+        </title>
+    </head>
+    <body>
+        <h1 id="h11"></h1>
+        <div id="div1">
+            <h1>WELCOME TO WEBSITE</h1>
+        </div>
+        <script>
+            window.onload=function(){
+                setInterval(demo,"100");
+            }
+            function demo(){
+                if(navigator.onLine == true){
+                    document.getElementById("div1").style.display = "block";
+                    document.getElementById("h11").innerHTML = "";
+                }
+                else{
+                    document.getElementById("div1").style.display = "none";
+                    document.getElementById("h11").innerHTML = "PLEASE CONNECT YOUR INTERNET CONECTION.";
+                }
+            }
+        </script>
+    </body>
+</html>

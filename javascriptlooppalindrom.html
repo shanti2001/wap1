@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US">
+        <meta charset="UTF-8">
+        <title>Print a to z</title>
+    </head>
+    <body>
+        <form id="from">
+            <h1>print Palindrom</h1>
+            <input type="number" id="num">
+            <input type="submit" id="submit">
+            <p id="ppp"></p>
+        </form>
+        <script>
+            var frm = document.getElementById("from");
+            var pd = document.getElementById("ppp");
+            frm.onsubmit = function(){
+               var no = document.getElementById("num").value;
+               var input = no;
+               var n = input.toString().length;
+               var result =0;
+               for(var i=0;i<n;i++){
+                   var ld =no%10;
+                   result =result*10+ld;
+                   no =parseInt(no/10);
+               }
+               if(input==result){
+                   pd.innerHTML ="number is palindrom";
+                   return false;
+               }
+               else{
+                   pd.innerHTML = "number is not palindrom";
+                   return false;
+               }
+                
+            }
+        </script>
+    </body>
+</html>

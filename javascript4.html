@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US"/>
+        <meta charset="UTF-8"/>
+        <title>Javascript4</title>
+        <style>
+            #div1{
+                width:300px;
+                height:50px;
+                background-color:red;
+                float:left;
+                position: fixed;
+                left: 40%;
+                bottom:0;
+            }
+            #range{
+                position: fixed;
+                bottom:0;
+                left:44%;
+            }
+        </style>
+        <script>
+            function myfun(){
+                var x = document.getElementById("range").value;
+                var y = document.getElementById("result");
+                y.style.fontSize=x+"px";
+                var z = document.getElementById("ppp");
+                z.innerHTML= "your font size is now="+x+" px";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="result">WAP INSTITUTE</h1>
+        <div id="div1">
+            <p id="ppp"></p>
+            <input type="range" id="range" min="0" max="1000" oninput="myfun()">
+        </div>
+    </body>
+</html>

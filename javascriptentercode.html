@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US">
+        <meta charset="UTF-8">
+        <title>
+            Enter code
+        </title>
+        <style>
+            input{
+                width: 80px;
+                height: 40px;
+                margin-left: 5px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form autocomplete="flase">
+        <h1>Enter credit card number</h1>
+        <input type="text" id="a" maxlength="4" onkeyup="demo(this,'b')">
+        <input type="text" id="b" maxlength="4" onkeyup="demo(this,'c')">
+        <input type="text" id="c" maxlength="4" onkeyup="demo(this,'d')">
+        <input type="text" id="d" maxlength="4">
+        </form>
+        <script>
+            function demo(x,y){
+                var p = x.value.length;
+                var q = x.getAttribute("maxlength");
+                if(p==q){
+                    document.getElementById(y).focus();
+                }
+            }
+           /* document.onkeydown = function(event){
+                if(event.keyCode == 97){
+                    window.alert("hello");
+                }
+            }*/
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US">
+        <meta charset="UTF-8">
+        <title>First arry</title>
+    </head>
+    <body>
+        <form id="frm">
+            Username
+            <input type="text" name="username" id="username"><br>
+            <br>
+            Password
+            <input type="password" name="password" id="password"><br>
+            <input type="submit" name="submit" value="login">
+        </form>
+        <script>
+            var x = document.getElementById("frm");
+            x.onsubmit = function(){
+                var user = [];
+                user[0] = document.getElementById("username").value;
+                user[1] = document.getElementById("password").value;
+                if(user[0] == "ram"){
+                    if(user[1] == 1234){
+                        window.alert("login succeesful");
+                    }
+                    else{
+                        window.alert("password wrong");
+                    }
+                }
+                else{
+                    window.alert("user not found");
+                }
+            }
+        </script>
+    </body>
+</html>

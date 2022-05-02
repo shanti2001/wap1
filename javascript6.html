@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US"/>
+        <meta charset="UTF-8"/>
+        <title>Javascript5</title>
+        <style>
+            #hhh{
+                text-align: center;
+            }
+            #page{
+                width:500px;
+                height: 500px;
+                border: 2px solid red;
+                margin:0 auto;
+            }
+            #pic{
+                width:500px;
+                height: 250px;
+            }
+        </style>
+    <script>
+        function bright(){
+            var x = document.getElementById("brightness").value;
+            var y = document.getElementById("pic");
+            y.style.WebkitFilter = "brightness("+x+"%)";
+            y.style.filter = "brightness("+x+"%)";
+        }
+        function contrast(){
+            var x = document.getElementById("contrast").value;
+            var y = document.getElementById("pic");
+            y.style.WebkitFilter = "contrast("+x+"%)";
+            y.style.filter = "contrast("+x+"%)";
+        }
+        function saturate(){
+            var x = document.getElementById("saturate").value;
+            var y = document.getElementById("pic");
+            y.style.WebkitFilter = "saturate("+x+"%)";
+            y.style.filter = "saturate("+x+"%)";
+        }
+        
+    </script>
+    </head>
+    <body>
+        <div id="page">
+        <h1 id="hhh">Image Effects</h1>
+        <br><br>
+        <img src="../images/a.jpg" id="pic"/><br>
+        <br>Brightness<br>
+        <input type="range" min="0" max="150" id="brightness" oninput="bright()">
+        <br>contrast<br>
+        <input type="range" min="0" max="400" id="contrast" oninput="contrast()">
+        <br>saturate<br>
+        <input type="range" min="0" max="350" id="saturate" oninput="saturate()">
+        </div>
+        <p id="ppp"></p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US"/>
+        <meta charset="UTF-8"/>
+        <title>Javascript5</title>
+        <script>
+            function myfun1(){
+                var x = document.getElementById("first").value;
+                var y = document.getElementById("second").value;
+                var a = x+y;
+                document.getElementById("ppp").innerHTML = "your additional is "+a;
+            }
+            function myfun(){
+                var x = document.getElementById("first").value;
+                var y = document.getElementById("second").value;
+                var z = x*y;
+                document.getElementById("ppp").innerHTML = "your multiple is "+z;
+                
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="number" id="first" placeholder="first number">
+        <input type="number" id="second" placeholder="second number">
+        <button onclick="myfun()">multiple me</button>
+        <button onclick="myfun1()">add me</button>
+        <p id="ppp"></p>
+        <p id="pp"></p>
+    </body>
+</html>

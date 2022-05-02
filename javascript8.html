@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US"/>
+        <meta charset="UTF-8"/>
+        <title>tarnary operetor</title>
+        <script>
+            function myfun(){
+                var x = document.getElementById("oper").value;
+                var a = x%2==0 ?" is even number.":" is odd number.";
+                var y = document.getElementById("ppp");
+                y.innerHTML = x+a;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="number" id="oper">
+        <button onclick="myfun()">check even or odd</button>
+        <p id="ppp"></p>
+    </body>
+</html>

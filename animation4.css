@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.page{
+    width:720px;
+    height: 200px;
+    border:1px solid red;
+    margin: 100px auto;
+    overflow:hidden;
+}
+.slider{
+    width:1400px;
+    height: 200px;
+    float: left;
+    position: relative;
+    -webkit-animation:wap 10s alternate infinite;
+    -o-animation:wap 10s alternate infinite;
+    -moz-animation:wap 10s alternate infinite;
+    animation:wap 10s alternate infinite;
+}
+@keyframes wap{
+    0%{top: 0;left: 0;}
+    100%{top:0;left: -1000px;}
+}
+
+img{
+    width: 250px;
+    height:100px;
+    float: left;
+    margin: 50px;
+    -webkit-filter:grayscale(100%);
+    -o-filter:grayscale(100%);
+    -moz-filter:grayscale(100%);
+    filter:grayscale(100%);
+}
+img:hover{
+    -webkit-filter: none;
+    -o-filter: none;
+    -moz-filter: none;
+    filter: none;
+}
+.slider:hover{
+    animation-play-state:paused;
+}

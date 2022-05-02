@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US">
+        <meta charset="UTF-8">
+        <title>Print a to z</title>
+    </head>
+    <body>
+        <form id="from">
+            <h1>print a to z</h1>
+            <input type="submit" id="submit">
+        </form>
+        <script>
+            var frm = document.getElementById("from");
+            frm.onsubmit = function(){
+                var x = 'a';
+                var y = 'z';
+                for(var i=x.charCodeAt(0);i<=y.charCodeAt(0);i++){
+                    var result = String.fromCharCode(i);
+                    document.write(result+"<br>");
+                }
+            }
+        </script>
+    </body>
+</html>

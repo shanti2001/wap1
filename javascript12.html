@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US">
+        <meta charset="UTF-8">
+        <title>function perameter</title>
+    </head>
+    <body>
+        <input type="number" id="num-one">
+        <input type="number" id="num-two">
+        <button onclick="return demo()">calculate</button>
+        <h2>addition</h2>
+        <p id="add"></p>
+        <h2>subtract</h2>
+        <p id="sub"></p>
+        <h2>multiply</h2>
+        <p id="mul"></p>
+        <h2>division</h2>
+        <p id="divi"></p>
+        <script>
+            function demo(){
+                var x = Number(document.getElementById("num-one").value);
+                var y = Number(document.getElementById("num-two").value);
+                add(x,y);
+                sub(x,y);
+                mul(x,y);
+                divi(x,y);
+                return false;
+            }
+            function add(a,b){
+                var x = a+b;
+                var y = document.getElementById("add");
+                y.innerHTML = x;
+            }
+            function sub(a,b){
+                var x = a-b;
+                var y = document.getElementById("sub");
+                y.innerHTML = x;
+            }
+            function mul(a,b){
+                var x = a*b;
+                var y = document.getElementById("mul");
+                y.innerHTML = x;
+            }
+            function divi(a,b){
+                var x = a/b;
+                var y = document.getElementById("divi");
+                y.innerHTML = x;
+            }
+        </script>
+    </body>
+</html>

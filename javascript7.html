@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US"/>
+        <meta charset="UTF-8"/>
+        <title>Javascript5</title>
+        <script>
+            function calculate(){
+                var x = document.getElementById("cal").value;
+                var y = document.getElementById("ppp");
+                y.innerHTML = "your result is: "+eval(x);
+            }
+        </script>
+
+    </head>
+    <body>
+        <input type="text" id="cal">
+        <button onclick="calculate()">calculate</button>
+        <p id="ppp"></p>
+    </body>
+</html>

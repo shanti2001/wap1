@@ -1,0 +1,30 @@
+#nav-bar{
+    list-style:none;
+}
+#nav-item{
+    width:200px;
+    height:40px;
+    box-sizing:border-box;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    display:inline-block;
+    text-align: center;
+    padding:8px;
+}
+a{
+    text-decoration:none;
+    color: yellowgreen;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+#nav-item:hover{
+    background-color:pink;
+    border: none;
+    border-radius:50px;
+    transition:0.5s;
+    width:300px
+}
+#nav-item:hover a{
+    color:white;
+}

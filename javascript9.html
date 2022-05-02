@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta lang="en-US"/>
+        <meta charset="UTF-8"/>
+        <title>password</title>
+        <script>
+            function wap(){
+                var x = document.getElementById("word");
+                x.innerHTML = "Enter minimum 10 dight password";
+            }
+            function check(){
+                var x = document.getElementById("word");
+                x.style.display = "none";
+                var y = document.getElementById("loader");
+                y.style.opacity = "1";
+                var a = document.getElementById("pass").value;
+                a.length>=10?y.style.opacity = "0": y.style.opacity = "1";
+                var z = document.getElementById("tick");
+                a.length>=10?z.style.opacity = "1": z.style.opacity = "0";
+            }
+        </script>
+    </head>
+    <body>
+        <from>
+        PASSWORD
+        <input type="password" id="pass" name="password" onclick="wap()" oninput="check()">
+        <br>
+        <span id="word"></span>
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw" style="font-size:18px;opacity:0;" id="loader"></i>
+        <i class="fa fa-check" style="opacity:0;" id="tick"></i>
+        </from>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta lang="en-US"/>
+        <meta charset="UTF-8"/>
+        <title>password</title>
+        <style>
+            #password{
+                width:250px;
+                height: 30px;
+                float: left;
+            }
+            #fafa{
+                float: left;
+                margin-top:9px;
+                display: none;
+            }
+            #div1{
+                width: 300px;
+                height: auto;
+                border: 1px solid #ccc;
+                float: left;
+                clear: left;
+                margin-top: 2px;
+                display: none;
+            }
+        </style>
+        <script>
+            function demo(){
+                var x = document.getElementById("div1");
+                x.style.display = "block";
+            }
+            function check(){
+                var x = document.getElementById("password").value;
+                var a = document.getElementById("upper");
+                var b = document.getElementById("lower");
+                var c = document.getElementById("num");
+                var d = document.getElementById("fafa");
+                var e = document.getElementById("div1");
+                var p = /[A-Z]/g;
+                var q = /[a-z]/g;
+                var r = /[0-9]/g;
+                x.match(p)?a.style.display = "none":a.style.display = "block";
+                x.match(q)?b.style.display = "none":b.style.display = "block";
+                x.match(r)?c.style.display = "none":c.style.display = "block";
+                x.match(p)&&x.match(q)&&x.match(r)?d.style.display = "block":d.style.display = "none";
+                x.match(p)&&x.match(q)&&x.match(r)?e.style.display = "none":e.style.display = "block";
+            }
+        </script>
+    </head>
+    <body>
+        <form id="form1">
+        PASSWORD<br>
+        <input type="password" name="password" id="password" onclick="demo()" oninput="check()"><i class="fa fa-check" id="fafa"></i>
+        <div id="div1">
+            <p id="upper">Upper requried</p>
+            <p id="lower">Lower requried</p>
+            <p id="num">Number requried</p>
+        </div>
+
+        </form>
+    </body>
+</html>

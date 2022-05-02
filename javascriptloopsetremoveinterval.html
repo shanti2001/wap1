@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <title>Interval</title>
+<body>
+    <h1 id="ppp"></h1>
+    <button id="start" onclick="start()">start counter</button>
+    <button id="stop" onclick="stop()">stop counter</button>
+    <script>
+        var p;
+        function start(){
+            
+            var btn = document.getElementById("ppp");
+            var a = 1;
+            function demo(){
+             btn.innerHTML = a++;
+             if(a===50){
+                 clearInterval(p);
+             }
+            
+            }
+            p= setInterval(demo,100);
+        }
+        function stop(){
+            
+        
+        clearInterval(p);
+        }
+    
+       
+    </script>
+</body>
+</html>

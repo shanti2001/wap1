@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+/*start grid coding*/
+.col-1{
+    width:8.33%;
+}
+.col-2{
+    width:16.66%;
+}
+.col-3{
+    width:25%;
+}
+.col-4{
+    width:33.33%;
+}
+.col-5{
+    width:41.66%;
+}
+.col-6{
+    width:50%;
+}
+.col-7{
+    width:58.33%;
+}
+.col-8{
+    width:66.66%;
+}
+.col-9{
+    width:75%;
+}
+.col-10{
+    width:83.33%;
+}
+.col-11{
+    width:91.66%;
+}
+.col-12{
+    width:100%;
+}
+/*end grid coding*/
+/*start desktop coding*/
+.header,.nav,.section,.footer{
+    float: left;
+    margin-left: 4.17%;
+    margin-right: 4.17%;
+}
+.header{
+    background-color: blue;
+    color: white;
+    height: 150px;
+    text-align: center;
+}
+.nav{
+    height: 60px;
+}
+#navbar{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#nav-item{
+    float: left;
+    background-color: black;
+    height: 60px;
+    text-align: center;
+    padding-top: 17px;
+}
+#nava{
+    text-decoration: none;
+    color: white;
+}
+.section{
+    background-color:yellowgreen;
+    color: white;
+    height: 400px;
+}
+.footer{
+    background-color:black;
+    color: white;
+    height: 60px;
+}
+/*end desktop coding*/
+@media only screen and (max-width:500px)
+{
+    
+    .col-11{width:100%}
+    .header,.nav,.section,.footer{
+        margin: 0;
+    }
+    .header{height: 80px;}
+    .col-3{
+        width: 100%;
+        clear: left;
+        margin-top: 1px;
+        padding-top: 5px;
+
+    }
+    .nav{
+        height:auto;
+    }
+    #nav-item{
+        height: 40px;
+        float: left;
+    }
+    .section{
+        height:200px;
+    }
+    .footer{
+        background-color: turquoise;
+    }
+
+}
+@media only screen and (min-width:768px) and (max-width:992px)
+{
+    .col-3{
+        width:49%;
+        float: left;
+        margin-top:2px;
+        margin-right:0.5%;
+        margin-left: 0.5%;
+        padding-top: 3px;
+    }
+    .nav{height: auto;}
+    .col-11{width:100%}
+    .header,.nav,.section,.footer{
+        margin: 0;
+    }
+    .section{height: 200px;
+    background-color: palevioletred;}
+    .footer{background-color: yellow;
+    color: green;}
+
+}

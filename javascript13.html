@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en-US">
+        <meta charset="UTF-8">
+        <title>show-hide</title>
+    </head>
+    <body>
+        <button id="btn" onclick="fan()">Hide</button>
+        <img src="../images/a.jpg" id="demo">
+        <script>
+            function fan(){
+                var x = document.getElementById("demo");
+                var y = document.getElementById("btn");
+                var z = document.getElementById("btn").innerHTML;
+                x.style.display = "none";
+                y.innerHTML = "Show";
+                if(z == "Show"){
+                    x.style.display = "block";
+                    y.innerHTML = "Hide";
+                }
+                else{
+                    x.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
